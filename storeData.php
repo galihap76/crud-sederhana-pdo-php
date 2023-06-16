@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->bindParam(':jurusan', $jurusan); // Mengikat nilai jurusan ke parameter-placeholder :jurusan
     $stmt->execute(); // Menjalankan pernyataan SQL untuk menyimpan data ke database
 
-    tutupKoneksi($stmt, $conn); // Tutup koneksi
+    tutupKoneksi($conn); // Tutup koneksi
 } else {
     header('HTTP/1.1 404 Not found'); // Mengirimkan header respons HTTP 404 jika permintaan bukan metode POST
 }
