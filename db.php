@@ -9,7 +9,7 @@ $conn = new PDO("mysql:host=$servername;dbname=db_mahasiswa", $username, $passwo
 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
 // Tutup koneksi database
-function tutupKoneksi($stmt = null, $conn = null)
+function tutupKoneksi($conn)
 { 
     $conn = null;
 }
