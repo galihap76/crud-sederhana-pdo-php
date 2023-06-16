@@ -24,7 +24,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->bindParam(':nama', $nama); // Mengikat parameter nama mahasiswa ke statement
     $stmt->bindParam(':jurusan', $jurusan); // Mengikat parameter jurusan mahasiswa ke statement
     $stmt->execute(); // Menjalankan statement query
-    tutupKoneksi($stmt, $conn); // Menutup koneksi ke database
+    tutupKoneksi($conn); // Menutup koneksi ke database
 } else {
     header('HTTP/1.1 404 Not found'); // Mengirimkan header respons HTTP 404 jika permintaan bukan metode POST
 }
